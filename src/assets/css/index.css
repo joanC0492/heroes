@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+}
+@layer utilities {
+}
+@layer components {
+}
+
+/*
+  - La capa "base" es para cosas como reglas de reinicio o estilos predeterminados aplicados a elementos HTML sin formato.
+    @layer base {
+      h1 {
+        @apply text-2xl;
+      }
+      h2 {
+        @apply text-xl;
+      } 
+    }
+  - La capa "components" es para estilos basados ​​en clases que desea poder anular con utilidades.
+    * Es un buen lugar para colocar estilos personalizados para cualquier componente de terceros que esté utilizando
+    @layer components {
+      .card {
+        background-color: theme('colors.white');
+        border-radius: theme('borderRadius.lg');
+        padding: theme('spacing.6');
+        box-shadow: theme('boxShadow.xl');
+      }  
+    }  
+  - La capa "utilities" es para clases pequeñas de un solo propósito que siempre deben tener prioridad sobre cualquier otro estilo.
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+    }
+
+
+***Si desea agregar un CSS personalizado que siempre debe incluirse, agréguelo a su hoja de estilo sin usar la directiva @layer
+*/
